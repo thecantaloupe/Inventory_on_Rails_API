@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address1: MyString
+  city: MyString
+  state: MyString
+  description: MyString
+  lat: 9.99
+  lng: 9.99
+  warehouse_manager: MyString
+  active: 
+
+two:
+  address1: MyString
+  city: MyString
+  state: MyString
+  description: MyString
+  lat: 9.99
+  lng: 9.99
+  warehouse_manager: MyString
+  active: 
