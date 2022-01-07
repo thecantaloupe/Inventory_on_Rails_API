@@ -5,12 +5,12 @@ class WarehousesController < ApplicationController
   def index
     @warehouses = Warehouse.all
 
-    render json: @warehouses
+    render json: @warehouses.to_json(include: :inventory_levels)
   end
 
   # GET /warehouses/1
   def show
-    render json: @warehouse
+    render json: @warehouse.to_json(include: :inventory_levels)
   end
 
   # POST /warehouses

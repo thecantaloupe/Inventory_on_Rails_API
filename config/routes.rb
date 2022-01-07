@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :inventory_item_selections
   resources :inventory_items
+  resources :inventory_levels
   resources :warehouses
   resource :users, only: [:create]
   post "/login", to: "users#login"

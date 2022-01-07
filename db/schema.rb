@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2022_01_06_114013) do
     t.bigint "warehouse_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "inventory_items_id", null: false
-    t.index ["inventory_items_id"], name: "index_inventory_levels_on_inventory_items_id"
+    t.bigint "inventory_item_id", null: false
+    t.index ["inventory_item_id"], name: "index_inventory_levels_on_inventory_item_id"
     t.index ["warehouse_id"], name: "index_inventory_levels_on_warehouse_id"
   end
 
@@ -64,6 +64,6 @@ ActiveRecord::Schema.define(version: 2022_01_06_114013) do
   end
 
   add_foreign_key "inventory_item_selections", "inventory_items"
-  add_foreign_key "inventory_levels", "inventory_items", column: "inventory_items_id"
+  add_foreign_key "inventory_levels", "inventory_items"
   add_foreign_key "inventory_levels", "warehouses"
 end
