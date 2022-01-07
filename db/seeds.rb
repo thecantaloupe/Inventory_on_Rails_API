@@ -63,3 +63,5 @@ InventoryLevel.create([
     {count: rand(150), warehouse_id: 2, inventory_item_id: 1},
     {count: rand(150), warehouse_id: 2, inventory_item_id: 1}
 ])
+
+user = User.create(email: "zachary.gomez@powerflex.com", password: "asdf")
