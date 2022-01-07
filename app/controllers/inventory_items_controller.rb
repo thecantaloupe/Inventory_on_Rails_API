@@ -39,6 +39,11 @@ class InventoryItemsController < ApplicationController
   end
 
   private
+    #Dont want to send back just one, want to send back updated array 
+    def get_inventory_items
+      InventoryItem.order('created_at DESC')
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_inventory_item
       @inventory_item = InventoryItem.find(params[:id])
